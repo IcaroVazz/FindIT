@@ -10,16 +10,16 @@ const Home = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Troca automática a cada 4s
+  // Troca automática a cada 10s
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 4000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
+   setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? restaurantImages.length - 1 : prevIndex - 1
     );
   };
