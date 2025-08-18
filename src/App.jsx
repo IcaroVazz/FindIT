@@ -1,18 +1,16 @@
-import { useState } from 'react'
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
-import Login from './Components/Login/index'
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-
   return (
     <>
-
       <Navbar />
-      <Home />
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
-  )
+  );
 }
 
 export default App;
