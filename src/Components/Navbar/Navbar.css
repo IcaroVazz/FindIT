@@ -1,43 +1,103 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
+/* Navbar Container */
 .Container {
-    background-color: white;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    padding: 20px 40px;
+    background: #ffffffcc; /* leve transparência */
+    backdrop-filter: blur(12px); /* efeito vidro */
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+    padding: 15px 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-
+/* Left Links */
 .Left {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
 }
 
+.Left h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.Left h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.Left h4:hover {
+    color: #007bff;
+}
+
+.Left h4:hover::after {
+    width: 100%;
+}
+
+/* Logo Center */
+.Center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img-logo {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.img-logo:hover {
+    transform: scale(1.08);
+}
+
+/* Right Profile */
 .Right {
     display: flex;
     align-items: center;
 }
 
-
-.Center {
-    flex: 1;
+.Right .btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px; 
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    background: transparent;
 }
 
-.Container h3, .img-logo {
-    cursor: pointer;
+.Right .btn:hover {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
 }
 
-.img-logo {
-    width: 60px;
-    height: 60px;
+.img-profile {
+    width: 25px;
+    margin-left: 10px;
 }
