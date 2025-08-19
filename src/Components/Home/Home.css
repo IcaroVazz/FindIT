@@ -1,4 +1,8 @@
-.home-container {
+.main-container {
+  font-family: sans-serif;
+}
+
+.top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,14 +15,20 @@
 }
 
 .text-section h1 {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.2;
+  color: #000099;
+  text-align: left;
 }
 
 .carousel-section {
   flex: 1.2;
   text-align: center;
+  padding: 18px;
+  border-radius: 20px;
+  background-color: #000099;
+  position: relative;
 }
 
 .carousel {
@@ -70,12 +80,285 @@
   background-color: black;
 }
 
-.False-nav {
-  background-color: #2F6C4C; 
-  height: 80px;
-  width: 100%; 
-  position: absolute; 
-  top: 95vh; 
-  left: 0; 
+.blue-bar {}
+
+.About-us {
+  padding: 40px;
+  text-align: center;
 }
 
+.About-us h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000099;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(8, 8, 229, 0.4);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 5px;
+}
+
+.card .icon {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.Avaliacoes,
+.Reservas,
+.Suport {
+  margin-bottom: 20px;
+}
+
+.Avaliacoes h2,
+.Reservas h2,
+.Suport h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.Avaliacoes p,
+.Reservas p,
+.Suport p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chat-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(4, 50, 110);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.1);
+}
+
+.chatbox {
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 10px;
+  animation: fadeInUp 0.3s ease;
+}
+
+.chat-header {
+  background: #042e7c;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  overflow-y: auto;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 5px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 5px;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #042e7c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.apartments-section {
+  padding: 40px;
+}
+
+.apartments-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.apartments-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.apartments-header a {
+  color: #000099;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.apartment-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-bottom: 20px;
+}
+
+.apartment-card {
+  min-width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.apartment-card:hover {
+  transform: translateY(-5px);
+}
+
+.apartment-image-container {
+  position: relative;
+}
+
+.apartment-image-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.apartment-details {
+  padding: 15px;
+}
+
+.apartment-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.apartment-location {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.rating-box {
+  background-color: #000099;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.rating-text {
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.reviews-text {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.apartment-price {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.price-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}

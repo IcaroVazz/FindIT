@@ -12,4 +12,4 @@ const CreateLogin = () => {
   )
 }
 
-export default CreateLogin;
+export default CreateLogin
