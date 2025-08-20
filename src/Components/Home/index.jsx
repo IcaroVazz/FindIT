@@ -65,11 +65,9 @@ const Index = () => {
       <div className="top-section">
         <div className="text-section">
           <h1 style={{ color: "#000099", fontSize: "3.0rem", textAlign: "Left" }}>
-            FIND THE BEST  <br />RESTAURANT OPTIONS <br />HERE FOR  YOU AND YOUR WHOLE FAMILY
+            FIND THE BEST <br />RESTAURANT OPTIONS <br />HERE FOR YOU AND YOUR WHOLE FAMILY
           </h1>
         </div>
-
-
         <div className="carousel-section">
           <div className="carousel">
             <button className="prev-btn" onClick={prevSlide}>❮</button>
@@ -87,14 +85,12 @@ const Index = () => {
           </div>
         </div>
       </div>
-
       <div className="blue-bar" style={{
         backgroundColor: "#000099",
         height: "60px",
         width: "100%",
         marginTop: "18px"
       }}></div>
-
       <div className="About-us">
         <h1 style={{ marginBottom: '60px', fontSize: '3.0rem' }}>POR QUE USAR O FIND IT?</h1>
         <div className="cards-container">
@@ -125,7 +121,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-
       <div className="apartments-section">
         <div className="apartments-header">
           <h1 style={{ marginBottom: '60px', fontSize: '3.0rem', textAlign: 'center', color: '#000099' }}>RESTAURANTES QUE AS PESSOAS MAIS AMAM</h1>
@@ -152,8 +147,6 @@ const Index = () => {
           ))}
         </div>
       </div>
-
-
       <div className="chatbot-container">
         {chatOpen && (
           <div className="chatbox">
@@ -174,6 +167,50 @@ const Index = () => {
           <img src={LegendBot} alt="Chatbot Legend" style={{ height: '40px' }} />
         </button>
       </div>
+
+      <footer className="main-footer">
+        <div className="footer-content">
+          <div className="footer-section about">
+            <h3>Find It</h3>
+            <p>
+              Your guide to finding the best restaurants for you and your family.
+            </p>
+          </div>
+          <div className="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div className="footer-section social">
+            <h3>Follow Us</h3>
+            <div className="social-links">
+              <a href="#"><i className="fab fa-facebook-f"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div className="footer-section contact-info">
+            <h3>Contact Info</h3>
+            <p>
+              <i className="fas fa-map-marker-alt"></i> Av. Exemplo, 123 - Salvador, BA
+            </p>
+            <p>
+              <i className="fas fa-phone"></i> +55 71 9999-8888
+            </p>
+            <p>
+              <i className="fas fa-envelope"></i> contact@findit.com
+            </p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          &copy; 2024 Find It. All Rights Reserved.
+        </div>
+      </footer>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="Left">
                 <h4 className="AboutUs" style={{ fontSize: '20px', color: '#000099' }}>About Us</h4>
                 <h4 className="Options" style={{ fontSize: '20px', color: '#000099' }}>Options</h4>
-                <h4 className="Catalog" style={{ fontSize: '20px', color: '#000099' }}>Catalog</h4>
+                <h4 className="Catalog" style={{ fontSize: '20px', color: '#000099' }} onClick={() => window.location.href = '/catalog'}>Catalog</h4>
             </div>
 
             <div className="Center">
