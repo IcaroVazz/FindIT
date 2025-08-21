@@ -55,14 +55,14 @@ const catalog_data = {
       {
         "id": 2,
         "nome": "Sushi Yama",
-        "foto_destaque": "https://exemplo.com/fotos/sushiyama-prato.jpg",
+        "foto_destaque": "https://www.google.com/imgres?q=sushi&imgurl=https%3A%2F%2Fi0.wp.com%2Fwww.ufrgs.br%2Flaranjanacolher%2Fwp-content%2Fuploads%2F2021%2F08%2F1.png%3Ffit%3D960%252C960%26ssl%3D1&imgrefurl=https%3A%2F%2Fwww.ufrgs.br%2Flaranjanacolher%2F2021%2F08%2F05%2Forigens-e-difusao-do-sushi%2F&docid=Cpp4ctUf0eJ3FM&tbnid=N6M4CgCPD30BWM&vet=12ahUKEwi9tcvag5yPAxUiGbkGHZDgCCYQM3oECF8QAA..i&w=960&h=960&hcb=2&ved=2ahUKEwi9tcvag5yPAxUiGbkGHZDgCCYQM3oECF8QAA",
         "faixa_preco": "alto custo",
         "culinaria": "japonesa",
         "endereco": "Av. Otávio Mangabeira, 245",
         "bairro": "Pituba",
         "detalhes": {
           "galeria_fotos": [
-            "https://exemplo.com/fotos/sushiyama-1.jpg",
+            "https://www.google.com/imgres?q=sushi&imgurl=https%3A%2F%2Fi0.wp.com%2Fwww.ufrgs.br%2Flaranjanacolher%2Fwp-content%2Fuploads%2F2021%2F08%2F1.png%3Ffit%3D960%252C960%26ssl%3D1&imgrefurl=https%3A%2F%2Fwww.ufrgs.br%2Flaranjanacolher%2F2021%2F08%2F05%2Forigens-e-difusao-do-sushi%2F&docid=Cpp4ctUf0eJ3FM&tbnid=N6M4CgCPD30BWM&vet=12ahUKEwi9tcvag5yPAxUiGbkGHZDgCCYQM3oECF8QAA..i&w=960&h=960&hcb=2&ved=2ahUKEwi9tcvag5yPAxUiGbkGHZDgCCYQM3oECF8QAA",
             "https://exemplo.com/fotos/sushiyama-2.jpg",
             "https://exemplo.com/fotos/sushiyama-3.jpg"
           ],
@@ -491,7 +491,7 @@ const catalog_data = {
       {
         "id": 15,
         "nome": "Sorveteria Gelatto & Cia",
-        "foto_destaque": "https://exemplo.com/fotos/gelattoecia-prato.jpg",
+        "foto_destaque": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHX-BWlJjZhC63Rgttwc0pjD5Kp5zpZR9IUw&s",
         "faixa_preco": "baixo custo",
         "culinaria": "sorveteria",
         "endereco": "Av. Jorge Amado, 567",
@@ -531,7 +531,7 @@ const getRatingText = (stars) => {
     case 5:
       return "Excepcional";
     case 4:
-      return "Fabuloso";
+      return "Ótimo";
     case 3:
       return "Muito Bom";
     default:

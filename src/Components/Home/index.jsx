@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import LegendBot from "./LegendBott.png";
+import MidBot from "./MidBot";
 
 const Index = () => {
   const images = [
@@ -10,6 +11,23 @@ const Index = () => {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [chatOpen, setChatOpen] = useState(false);
+  const restaurantsSectionRef = useRef(null);
+  const [fallingIcons, setFallingIcons] = useState([]);
+
+  useEffect(() => {
+    const restaurantSection = restaurantsSectionRef.current;
+    if (restaurantSection) {
+      const { offsetWidth, offsetHeight } = restaurantSection;
+      const newIcons = Array.from({ length: 50 }, (_, index) => ({
+        id: index,
+        icon: ["🍕", "🍔", "🍟", "🍹"][Math.floor(Math.random() * 5)],
+        x: Math.random() * offsetWidth,
+        y: Math.random() * -offsetHeight,
+        duration: 5 + Math.random() * 5,
+      }));
+      setFallingIcons(newIcons);
+    }
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -57,6 +75,24 @@ const Index = () => {
       reviews: "3.223 avaliações",
       price: "2.543",
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f1/96/12/mamma-s-pizza-25-de-tradicao.jpg?w=400&h=300&s=1",
+    },
+    {
+      title: "Outback Steakhouse",
+      location: "Boca do Rio, Salvador",
+      rating: "9.4",
+      ratingText: "Fantástico",
+      reviews: "3.223 avaliações",
+      price: "2.543",
+      imageUrl: "https://cdn.outback.com.br/wp-data/wp-content/uploads/2025/03/PAGINA-RESTAURANTES.jpg",
+    },
+    {
+      title: "Cantina Volpi",
+      location: "Boca do Rio, Salvador",
+      rating: "9.4",
+      ratingText: "Fantástico",
+      reviews: "3.223 avaliações",
+      price: "2.543",
+      imageUrl: "https://letsgobahia.com.br/storage/app/uploads/public/646/fc1/636/646fc163615b7483345515.jpeg",
     }
   ];
 
@@ -121,9 +157,9 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <div className="apartments-section">
+      <div className="apartments-section" ref={restaurantsSectionRef}>
         <div className="apartments-header">
-          <h1 style={{ marginBottom: '60px', fontSize: '3.0rem', textAlign: 'center', color: '#000099' }}>RESTAURANTES QUE AS PESSOAS MAIS AMAM</h1>
+          <h1 style={{ marginBottom: '60px', fontSize: '3.0rem', textAlign: 'center', color: '#000099' }}>RESTAURANTES COM MELHORES AVALIAÇÕES</h1>
         </div>
         <div className="apartment-cards-container">
           {apartments.map((apt, index) => (
@@ -146,19 +182,24 @@ const Index = () => {
             </div>
           ))}
         </div>
+        <div className="falling-icons-container">
+          {fallingIcons.map((icon) => (
+            <span
+              key={icon.id}
+              className="falling-icon"
+              style={{
+                left: `${icon.x}px`,
+                animationDuration: `${icon.duration}s`,
+              }}
+            >
+              {icon.icon}
+            </span>
+          ))}
+        </div>
       </div>
       <div className="chatbot-container">
         {chatOpen && (
-          <div className="chatbox">
-            <div className="chat-header">LegendBot</div>
-            <div className="chat-body">
-              <p>👋 Olá sou o LegendBot, em breve vou responder aqui!</p>
-            </div>
-            <div className="chat-footer">
-              <input type="text" placeholder="Digite sua mensagem..." />
-              <button>➤</button>
-            </div>
-          </div>
+          <MidBot />
         )}
         <button
           className="chat-toggle"
@@ -174,6 +215,7 @@ const Index = () => {
             <h3>Find It</h3>
             <p>
               Your guide to finding the best restaurants for you and your family.
+              Your guide to finding the best restaurants for you and your family.
             </p>
           </div>
           <div className="footer-section links">
@@ -187,11 +229,10 @@ const Index = () => {
           </div>
           <div className="footer-section social">
             <h3>Follow Us</h3>
-            <div className="social-links">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            <div className="social-links-list">
+              <a href="#">@FindIT_<i className="fab fa-twitter"></i></a>
+              <a href="#">@FindIT_ofc<i className="fab fa-instagram"></i></a>
+              <a href="#">@FindIT<i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
           <div className="footer-section contact-info">
@@ -208,7 +249,7 @@ const Index = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          &copy; 2024 Find It. All Rights Reserved.
+          &copy; 2025 Find It. All Rights Reserved.
         </div>
       </footer>
     </div>
