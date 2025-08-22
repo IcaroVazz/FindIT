@@ -72,7 +72,7 @@ const Index = () => {
       location: "Boca do Rio, Salvador",
       rating: "9.4",
       ratingText: "Fantástico",
-      reviews: "3.223 avaliações",
+      reviews: "30.224 avaliações",
       price: "2.543",
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f1/96/12/mamma-s-pizza-25-de-tradicao.jpg?w=400&h=300&s=1",
     },
@@ -81,7 +81,7 @@ const Index = () => {
       location: "Boca do Rio, Salvador",
       rating: "9.4",
       ratingText: "Fantástico",
-      reviews: "3.223 avaliações",
+      reviews: "23.232 avaliações",
       price: "2.543",
       imageUrl: "https://cdn.outback.com.br/wp-data/wp-content/uploads/2025/03/PAGINA-RESTAURANTES.jpg",
     },
@@ -90,7 +90,7 @@ const Index = () => {
       location: "Boca do Rio, Salvador",
       rating: "9.4",
       ratingText: "Fantástico",
-      reviews: "3.223 avaliações",
+      reviews: "32.223 avaliações",
       price: "2.543",
       imageUrl: "https://letsgobahia.com.br/storage/app/uploads/public/646/fc1/636/646fc163615b7483345515.jpeg",
     }
@@ -128,7 +128,7 @@ const Index = () => {
         marginTop: "18px"
       }}></div>
       <div className="About-us">
-        <h1 style={{ marginBottom: '60px', fontSize: '3.0rem' }}>POR QUE USAR O FIND IT?</h1>
+        <h1 style={{ marginBottom: '60px', fontSize: '3.0rem' }}>ABOUT US</h1>
         <div className="cards-container">
           <div className="card">
             <div className="icon"></div>
@@ -159,7 +159,7 @@ const Index = () => {
       </div>
       <div className="apartments-section" ref={restaurantsSectionRef}>
         <div className="apartments-header">
-          <h1 style={{ marginBottom: '60px', fontSize: '3.0rem', textAlign: 'center', color: '#000099' }}>RESTAURANTES COM MELHORES AVALIAÇÕES</h1>
+          <h1 style={{ marginBottom: '60px', fontSize: '3.0rem', textAlign: 'center', color: '#000099' }}>TOP-RATED RESTAURANTS</h1>
         </div>
         <div className="apartment-cards-container">
           {apartments.map((apt, index) => (

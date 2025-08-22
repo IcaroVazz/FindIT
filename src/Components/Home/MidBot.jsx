@@ -25,46 +25,108 @@ const MidBot = () => {
     const lowerCaseMessage = userMessage.toLowerCase();
 
     const prompts = {
-      saudacao: ['olá', 'oi', 'oie', 'hi', 'ola', 'bom dia', 'boa tarde', 'boa noite'],
-      busca: ['restaurante', 'restaurantes', 'comida', 'onde comer', 'buscar', 'encontrar'],
-      avaliacao: ['avaliação', 'review', 'comentário', 'feedback', 'opinião', 'nota', 'estrelas'],
-      reserva: ['reserva', 'reservar', 'agendar', 'mesa', 'reservar mesa', 'agendar mesa'],
-      promocoes: ['promoção', 'promoções', 'desconto', 'oferta', 'ofertas'],
-      suporte: ['erro', 'problema', 'ajuda', 'suporte', 'não funciona', 'bug'],
-      contato: ['contato', 'falar com alguém', 'falar com', 'telefone', 'email', 'endereço', 'localização'],
-      sobre: ['quem é você', 'o que é find it', 'sobre', 'o que você faz'],
-      agradecimento: ['obrigado', 'obrigada', 'valeu', 'agradeço', 'muito obrigado'],
+      saudacao: [
+        'olá', 'oi', 'oie', 'hi', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'hello', 'hey',
+        'e aí', 'tudo bem', 'como vai', 'prazer em te conhecer', 'posso te ajudar?', 'alô',
+        'fala!', 'salve', 'beleza?', 'oi, como posso te ajudar hoje?', 'tudo bem com você?',
+        'que bom que você está aqui', 'e ai', 'olá, tudo bem?', 'como posso te ajudar?', 'oi, tudo bem?',
+        'meu nome é', 'fala', 'e aí, beleza?', 'olá, como vai?', 'bom dia, tudo bem?', 'eai'
+      ],
+      busca: [
+        'restaurante', 'restaurantes', 'comida', 'onde comer', 'buscar', 'encontrar',
+        'procurar', 'procurar por', 'quero comer', 'quero achar', 'sugestões de', 'onde posso',
+        'onde tem', 'qual o melhor lugar', 'opções de', 'estou com fome', 'lugares para comer',
+        'me ajude a encontrar', 'estou procurando', 'quais são os restaurantes', 'onde jantar',
+        'onde almoçar', 'achar restaurante', 'procurar restaurante', 'onde comer por perto',
+        'buscar comida', 'lugares para almoçar', 'lugares para jantar', 'onde posso encontrar comida?',
+        'quero achar um lugar para comer', 'queria saber sobre restaurantes'
+      ],
+      avaliacao: [
+        'avaliação', 'review', 'comentário', 'feedback', 'opinião', 'nota', 'estrelas',
+        'avaliar', 'classificar', 'dizer o que achou', 'como foi o atendimento', 'dar uma nota',
+        'pontuação', 'qual a opinião de outros usuários', 'ler comentários', 'ver feedback',
+        'ver as notas', 'como as pessoas avaliam', 'o que as pessoas estão dizendo', 'qual a reputação',
+        'comentários dos clientes', 'como faço para avaliar?', 'quero deixar um comentário',
+        'quero ver as avaliações', 'nota do restaurante', 'avaliações de usuários',
+        'feedback sobre a comida', 'rating do lugar', 'reviews'
+      ],
+      reserva: [
+        'reserva', 'reservar', 'agendar', 'mesa', 'reservar mesa', 'agendar mesa',
+        'fazer uma reserva', 'quero uma mesa', 'marcar uma mesa', 'agendar um horário',
+        'tem vaga?', 'disponibilidade', 'marcar um lugar', 'fazer um agendamento',
+        'reservar para x pessoas', 'reservar um lugar', 'como faço para reservar',
+        'quero agendar', 'precisa de reserva?', 'quero fazer uma reserva', 'preciso reservar uma mesa',
+        'posso agendar um horário?', 'agendar uma mesa', 'quero uma mesa para hoje',
+        'fazer reserva para jantar'
+      ],
+      promocoes: [
+        'promoção', 'promoções', 'desconto', 'oferta', 'ofertas', 'tem algum desconto?',
+        'alguma oferta?', 'cupons', 'cupom de desconto', 'preços especiais', 'tem alguma vantagem',
+        'vale a pena?', 'novidades', 'combos', 'promo', 'ofertas especiais', 'o que está em promoção hoje',
+        'quais as ofertas', 'quais os descontos', 'tem promoções?', 'algum cupom?',
+        'descontos disponíveis', 'oferta especial', 'preço promocional'
+      ],
+      suporte: [
+        'erro', 'problema', 'ajuda', 'suporte', 'não funciona', 'bug', 'estou com um problema',
+        'não consigo fazer', 'algo deu errado', 'preciso de ajuda', 'me ajude', 'socorro',
+        'o aplicativo não está funcionando', 'deu um erro', 'tive um problema',
+        'o que fazer em caso de erro', 'contato para suporte', 'suporte técnico',
+        'não consigo acessar', 'falha', 'bug no app', 'não estou conseguindo usar',
+        'o que aconteceu?', 'preciso de suporte', 'suporte online'
+      ],
+      contato: [
+        'contato', 'falar com alguém', 'falar com', 'telefone', 'email', 'endereço',
+        'localização', 'como entrar em contato', 'qual o telefone', 'qual o e-mail',
+        'onde fica a loja', 'onde é o endereço', 'como posso falar com o suporte',
+        'qual o número', 'me passe o contato', 'quero entrar em contato',
+        'formas de contato', 'endereço físico', 'onde vocês estão localizados',
+        'fale conosco', 'número de telefone', 'endereço de email'
+      ],
+      sobre: [
+        'quem é você', 'o que é find it', 'sobre', 'o que você faz', 'o que é isso?',
+        'qual a sua função?', 'me fale sobre o find it', 'para que você serve?',
+        'como você funciona?', 'qual o seu propósito?', 'me descreva o que é',
+        'me conte mais', 'fale sobre o aplicativo', 'qual a sua finalidade',
+        'o que posso fazer com você', 'o que é o find it?', 'missão do find it',
+        'história do find it'
+      ],
+      agradecimento: [
+        'obrigado', 'obrigada', 'valeu', 'agradeço', 'muito obrigado', 'obrigadão',
+        'grato', 'agradecido', 'muito grato', 'foi de grande ajuda', 'obrigado pela ajuda',
+        'show de bola', 'muito agradecido', 'obrigada', 'de nada', 'obrigado novamente',
+        'valeu a ajuda', 'muito obrigado pela atenção', 'obg', 'valeu mesmo', 'obrigadao', 'agr', 'mt obg'
+      ],
     };
 
     if (prompts.saudacao.some(word => lowerCaseMessage.includes(word))) {
-      return 'Olá! Sou o FindBot, o assistente virtual do Find It. Como posso te ajudar hoje?';
+      return 'E aí, beleza? FindBot na área! Pronto pra te ajudar a achar a boia perfeita.';
     }
     if (prompts.busca.some(word => lowerCaseMessage.includes(word))) {
-      return 'Nós temos várias opções de restaurantes. Você pode navegar pela seção "Restaurantes que as pessoas mais amam" ou pesquisar por um tipo de cozinha específico.';
+      return 'Calma, a fome bateu forte, né? Deixa que eu te ajudo a achar um paraíso gastronômico. Me diz aí o que você tá com vontade de comer!';
     }
     if (prompts.avaliacao.some(word => lowerCaseMessage.includes(word))) {
-      return 'As avaliações são feitas por outros usuários, como você! Elas te dão uma visão real da experiência no restaurante.';
+      return 'Pra quê avaliação? Pra saber se o lugar é "bom de garfo" ou "deu ruim". As avaliações são a voz do povo, e o povo, meu amigo, não perdoa!';
     }
     if (prompts.reserva.some(word => lowerCaseMessage.includes(word))) {
-      return 'Para fazer uma reserva, basta ir na página do restaurante desejado e seguir as instruções. É rápido e fácil!';
+      return 'Quer reservar? Claro! Ninguém merece passar fome na fila. É só ir na página do restaurante, dar uns cliques e garantir sua poltrona real. Simples assim!';
     }
     if (prompts.promocoes.some(word => lowerCaseMessage.includes(word))) {
-      return 'Sim! Fique de olho na nossa seção de promoções exclusivas para encontrar ofertas especiais.';
+      return 'Promoção? Vamo nessa! A vida é muito curta pra não aproveitar um descontinho. Fica de olho na nossa seção de "milagres econômicos". Sua carteira agradece!';
     }
     if (prompts.suporte.some(word => lowerCaseMessage.includes(word))) {
-      return 'Sinto muito pelo transtorno. Por favor, descreva o problema com mais detalhes para que eu possa encaminhá-lo para a equipe de suporte.';
+      return 'Bug? Erro? Vish... parece que o sistema tá de mau humor. Mas relaxa, eu já mando um sinal de fumaça pro pessoal do suporte. Me conta o que rolou em detalhes, e a gente resolve isso!';
     }
     if (prompts.contato.some(word => lowerCaseMessage.includes(word))) {
-      return 'Você pode nos contatar por email em **contato@findit.com** ou pelo telefone **+55 71 9999-8888**. Estamos à disposição para ajudar.';
+      return 'Quer falar com um humano? Me sinto rejeitado... 😂 Mas tudo bem. Manda um oi pra eles no **contato@findit.com** ou liga no **+55 71 9999-8888**. Eles são menos engraçados que eu, mas resolvem as coisas.';
     }
     if (prompts.sobre.some(word => lowerCaseMessage.includes(word))) {
-      return 'O Find It é a sua plataforma para encontrar os melhores restaurantes na sua região, com avaliações de verdade e promoções exclusivas.';
+      return 'Eu? Sou o FindBot, o gênio da lâmpada dos restaurantes. Você faz o pedido, e eu faço a mágica de te achar o lugar perfeito pra comer. Acredite em mim, sou melhor que um GPS.';
     }
     if (prompts.agradecimento.some(word => lowerCaseMessage.includes(word))) {
-      return 'De nada! Estou aqui para ajudar sempre que precisar.';
+      return 'De nada! E olha que eu nem usei todo meu potencial de fofura. Volte sempre que a barriga roncar!';
     }
 
-    return 'Desculpe, não entendi. Tente perguntar sobre **restaurantes**, **reservas** ou **promoções**. Se for um problema, digite **"erro"**.';
+    return 'Ih, essa eu não peguei. Minha inteligência artificial tá de folga hoje. Tenta ser mais específico. Tipo, "restaurante", "reserva" ou "promoções". Se for um problema sério, grita **"erro"**!';
   };
 
   return (

@@ -16,7 +16,7 @@ const catalog_data = {
       {
         "id": 1,
         "nome": "Tempero da Bahia",
-        "foto_destaque": "https://exemplo.com/fotos/tempero-bahia-prato.jpg",
+        "foto_destaque": "https://muitogourmet.com/wp-content/uploads/2023/08/encantos-da-mare-para-festival-tempero-bahia.jpg",
         "faixa_preco": "médio",
         "culinaria": "baiana",
         "endereco": "Rua da Paz, 45",
@@ -55,7 +55,7 @@ const catalog_data = {
       {
         "id": 2,
         "nome": "Sushi Yama",
-        "foto_destaque": "https://www.google.com/imgres?q=sushi&imgurl=https%3A%2F%2Fi0.wp.com%2Fwww.ufrgs.br%2Flaranjanacolher%2Fwp-content%2Fuploads%2F2021%2F08%2F1.png%3Ffit%3D960%252C960%26ssl%3D1&imgrefurl=https%3A%2F%2Fwww.ufrgs.br%2Flaranjanacolher%2F2021%2F08%2F05%2Forigens-e-difusao-do-sushi%2F&docid=Cpp4ctUf0eJ3FM&tbnid=N6M4CgCPD30BWM&vet=12ahUKEwi9tcvag5yPAxUiGbkGHZDgCCYQM3oECF8QAA..i&w=960&h=960&hcb=2&ved=2ahUKEwi9tcvag5yPAxUiGbkGHZDgCCYQM3oECF8QAA",
+        "foto_destaque": "https://sushiyamafloripa.com.br/wp-content/uploads/2023/11/Shogun_SalmonCombo02_NOVO.jpg",
         "faixa_preco": "alto custo",
         "culinaria": "japonesa",
         "endereco": "Av. Otávio Mangabeira, 245",
@@ -89,7 +89,7 @@ const catalog_data = {
       {
         "id": 3,
         "nome": "Trattoria Bella Napoli",
-        "foto_destaque": "https://exemplo.com/fotos/bellanapoli-prato.jpg",
+        "foto_destaque": "https://media-cdn.tripadvisor.com/media/photo-s/03/f9/36/02/bella-napoli-130-madison.jpg",
         "faixa_preco": "alto custo",
         "culinaria": "italiana",
         "endereco": "Rua Portugal, 123",
@@ -123,7 +123,7 @@ const catalog_data = {
       {
         "id": 4,
         "nome": "Esfiharia Al Mustafa",
-        "foto_destaque": "https://exemplo.com/fotos/almustafa-prato.jpg",
+        "foto_destaque": "https://guiafranquiasdesucesso.com/wp-content/uploads/2019/06/franquia-arabis.jpg",
         "faixa_preco": "baixo custo",
         "culinaria": "árabe",
         "endereco": "Rua das Laranjeiras, 78",
@@ -156,7 +156,7 @@ const catalog_data = {
       {
         "id": 5,
         "nome": "Churrascaria Gaúcha",
-        "foto_destaque": "https://exemplo.com/fotos/gaucha-prato.jpg",
+        "foto_destaque": "https://shopblob.blob.core.windows.net/1204-produtoimagem/zoom-grou-ALMOCONACHURRASCARIA.jpg",
         "faixa_preco": "alto custo",
         "culinaria": "churrascaria",
         "endereco": "Av. ACM, 1024",
@@ -190,7 +190,7 @@ const catalog_data = {
       {
         "id": 6,
         "nome": "Casa de Tereza",
-        "foto_destaque": "https://exemplo.com/fotos/casatereza-prato.jpg",
+        "foto_destaque": "https://casadetereza.com.br/wp-content/uploads/2016/12/banner-3-1080x705.jpg",
         "faixa_preco": "médio",
         "culinaria": "baiana",
         "endereco": "Rua Odilon Santos, 45",
@@ -223,7 +223,7 @@ const catalog_data = {
       {
         "id": 7,
         "nome": "Maremonti",
-        "foto_destaque": "https://exemplo.com/fotos/maremonti-prato.jpg",
+        "foto_destaque": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/84/8e/17/externa.jpg?w=700&h=400&s=1",
         "faixa_preco": "alto custo",
         "culinaria": "frutos-do-mar",
         "endereco": "Av. Sete de Setembro, 3959",
@@ -256,7 +256,7 @@ const catalog_data = {
       {
         "id": 8,
         "nome": "Veg & Tal",
-        "foto_destaque": "https://exemplo.com/fotos/vegtal-prato.jpg",
+        "foto_destaque": "https://blog.duogourmet.com.br/wp-content/uploads/2019/07/11-Duo-Gourmet-Culinaria.jpg",
         "faixa_preco": "médio",
         "culinaria": "vegetariana",
         "endereco": "Rua Baependi, 78",
@@ -290,7 +290,7 @@ const catalog_data = {
       {
         "id": 9,
         "nome": "Burger House",
-        "foto_destaque": "https://exemplo.com/fotos/burgerhouse-prato.jpg",
+        "foto_destaque": "https://www.jornaldocomercio.com/_midias/jpg/2023/07/21/tm_180723_burger_house___3_-10273889.jpg",
         "faixa_preco": "médio",
         "culinaria": "hamburguer",
         "endereco": "Rua das Hortênsias, 223",
@@ -325,7 +325,7 @@ const catalog_data = {
       {
         "id": 10,
         "nome": "Pizzaria Forno a Lenha",
-        "foto_destaque": "https://exemplo.com/fotos/fornoalenha-prato.jpg",
+        "foto_destaque": "https://d2yghbees9788u.cloudfront.net/foodconnection/2022/03/Alternativas-buscam-reduzir-o-uso-de-lenha-nas-pizzarias.png",
         "faixa_preco": "médio",
         "culinaria": "pizza",
         "endereco": "Av. Magalhães Neto, 1250",
@@ -359,7 +359,7 @@ const catalog_data = {
       {
         "id": 11,
         "nome": "Restaurante Sabor Mineiro",
-        "foto_destaque": "https://exemplo.com/fotos/sabormineiro-prato.jpg",
+        "foto_destaque": "https://media-cdn.tripadvisor.com/media/photo-s/05/77/87/49/sabor-mineiro-charneca.jpg",
         "faixa_preco": "médio",
         "culinaria": "mineira",
         "endereco": "Rua Professor Plínio Garcez, 88",
@@ -392,7 +392,7 @@ const catalog_data = {
       {
         "id": 12,
         "nome": "Cantinho Baiano",
-        "foto_destaque": "https://exemplo.com/fotos/cantinhobaiano-prato.jpg",
+        "foto_destaque": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/16/10/9e/misto-baiano-e-moqueca.jpg?w=900&h=500&s=1",
         "faixa_preco": "baixo custo",
         "culinaria": "baiana",
         "endereco": "Travessa Luiz Gama, 12",
@@ -425,7 +425,7 @@ const catalog_data = {
       {
         "id": 13,
         "nome": "Doceria da Maria",
-        "foto_destaque": "https://exemplo.com/fotos/doceriamaria-prato.jpg",
+        "foto_destaque": "https://mariaameliadoces.com.br/images/coffeeShops/cafeteria-aguas-claras.jpg",
         "faixa_preco": "baixo custo",
         "culinaria": "doces & sobremesas",
         "endereco": "Rua Carlos Gomes, 67",
@@ -458,7 +458,7 @@ const catalog_data = {
       {
         "id": 14,
         "nome": "Café Cultura",
-        "foto_destaque": "https://exemplo.com/fotos/cafecultura-prato.jpg",
+        "foto_destaque": "https://cafeculturabrasil.com/wp-content/uploads/2024/04/SQUARE-CORPORATIVA.webp",
         "faixa_preco": "médio",
         "culinaria": "cafeteria",
         "endereco": "Rua Professor Lopes Gama, 345",
@@ -490,8 +490,8 @@ const catalog_data = {
       },
       {
         "id": 15,
-        "nome": "Sorveteria Gelatto & Cia",
-        "foto_destaque": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHX-BWlJjZhC63Rgttwc0pjD5Kp5zpZR9IUw&s",
+        "nome": "Soptt Touch",
+        "foto_destaque": "https://i.pinimg.com/originals/0c/8f/dd/0c8fddd092b6ac8783623734eaae585a.jpg",
         "faixa_preco": "baixo custo",
         "culinaria": "sorveteria",
         "endereco": "Av. Jorge Amado, 567",
